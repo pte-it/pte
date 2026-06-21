@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Definizione di funzioni sequenziali e combinatorie nell'algebra di Boole" />
+  <meta name="keywords" content="Algebra di Boole,porte logiche, connettivi logici, funzioni sequenziali e cobinatorie, didattica, elettronica digitale, PTE ELETTRONICA" />
+  <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" />
+  <meta name="REVISIT-AFTER" content="10 DAYS" />
+  
+  <title>PTE ELETTRONICA Didattica: Algebra di Boole Funzioni sequenziali e combinatorie</title>
+
+    
+  <link href="../css/frame_code_1.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/main_menu-menu.css" media="screen" />
+
+  
+  
+</head><body topmargin="0" leftmargin="0">
+<div id="header">
+<table border="0" height="45" width="95%">
+  <tbody>
+    <tr>
+      <td width="80%"> <img src="images/logo_pte_170px.png" alt="logo PTE" title="logo_pte_170px" border="0" height="44" width="170" /> </td>
+      <td width="20%">
+      <h3 style="text-align: right;"> <a href="mailto:pte@pte.it">E-mail: pte@pte.it</a> </h3>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ul class="main_menu-menu">
+  <li class="first"><a href="http://www.pte.it/index.htm">Home Page</a></li>
+  <li><a>Esempi apparati didattici</a>
+    <ul>
+      <li><a href="http://www.pte.it/didattica/abaco/abaco.htm">Abaco</a></li>
+      <li><a href="http://www.pte.it/didattica/telemetro/telemetro.htm">Telemisura trigonometrica</a></li>
+    </ul>
+  </li>
+  <li class="first"><a href="http://www.pte.it/didattica/boole/boole1.htm">Esempicontenuti didattici</a> </li>
+  <li class="first"><a href="http://www.pte.it/links/links.htm">Link siti interessanti</a></li>
+</ul>
+</div>
+
+<div id="leftnavigation">
+<table border="0" cellpadding="2" cellspacing="1" width="98%">
+  <tbody>
+    <tr>
+      <td class="titolo">ALGEBRA di BOOLE</td>
+    </tr>
+    <tr>
+      <td><a href="boole1.htm">Premessa </a></td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Connettivi logici</td>
+    </tr>
+    <tr>
+      <td><a href="boole2.htm">Negazione (NOT)</a></td>
+    </tr>
+    <tr>
+      <td> <a href="boole3.htm">Prodotto (AND) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole4.htm">Prododotto invertito (NAND)&gt;</a></td>
+    </tr>
+    <tr>
+      <td><a href="boole5.htm">Somma (OR) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole6.htm">Somma Invertita (NOR) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole7.htm">Somma esclusiva (EXOR)</a></td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Funzioni logiche </td>
+    </tr>
+    <tr>
+      <td class="attivo">Funzioni sequenziali e combinatorie
+      <br><br>
+      <audio controls="controls">
+  		Il vostro browser non supporta il tag &lt;audio&gt;. 
+  		<!-- <source src="boole8.mp3" type="audio/mpeg"/>  -->
+   		<source src="boole8.ogg" type="audio/ogg"/>
+	 </audio> 
+      </td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Rappresentazione funzioni combinatorie</td>
+    </tr>
+    <tr>
+      <td><a href="boole9.htm">Tavole di verita' </a></td>
+    </tr>
+    <tr>
+      <td>
+      <hr /> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id="content">
+<table border="0" cellpadding="3" cellspacing="3" width="98%">
+  <tbody>
+    <tr>
+      <td width="100%">
+      <h1>Funzioni SEQUENZIALI e COMBINATORIE</h1>
+      <p>Una <u>funzione</u> cioè una <u>relazione</u> tra una o più
+variabili di <u>ingresso</u> <i>(variabili indipendenti)</i> ed una o
+più variabili in <u>uscita</u> (<i>variabili dipendenti</i>) , in cui
+la variabile (o le variabili) di uscita in un certo istante dipende
+(dipendono) esclusivamente dagli ingressi <u><font color="#008000">nello
+stesso istante</font></u> viene detta:<br />
+      </p>
+      <h2><font color="#ff0000">funzione combinatoria </font></h2>
+(nel senso che ad una certa combinazione degli ingressi corrisponde, <u>nello
+stesso istante</u>, una determinata uscita).
+      <p>Se viceversa:<br />
+l'uscita (o le uscite) in un certo istante, oltre che a dipendere dagli
+ingressi nello stesso istante, dipende (dipendono) <u>anche</u> dal
+valore assunto dagli ingressi <font color="#008000"><u>in istanti
+precedenti</u></font>, la funzione descrittiva del legame
+ingresso/uscita si dice:</p>
+      <h2><font color="#ff0000">funzione sequenziale. </font></h2>
+      <p>I sistemi descritti da funzioni sequenziali vengono detti <b>sistemi
+sequenziali </b> <br />
+Un sistema sequenziale è pertanto un dispositivo con <u><i>memoria</i></u>,
+in quanto <font color="#008000">gli ingressi precedenti determinano
+una situazione, detta <b>stato del sistema</b>, a partire dalla quale
+il sistema si evolve</font> in base agli ingressi applicati. </p>
+      <p>Lo <u>stato del sistema</u> costituisce cioè la <u><b>condizione
+iniziale</b></u> dell'evoluzione del sistema stesso in seguito
+all'applicazione degli ingressi.</p>
+      <hr /> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id="footer">
+<table border="0" cols="2" height="16" width="95%">
+  <tbody>
+    <tr>
+      <td width="80%"> <span style="color: white;"> Tutti i diritti
+riservati - Riproduzione vietata </span> </td>
+      <td width="20%"> <span style="color: white;">
+      <h3 style="text-align: right;"> Per info: pte@pte.it </h3>
+      </span> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</body></html>

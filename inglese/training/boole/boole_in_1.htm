@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>PTE ELETTRONICA Education: Boolean Algebra</title>
+    <meta content="text/html; charset=unicode" http-equiv="Content-Type"/>
+    <meta name="description" content="Boolen Algebra: main logic combinatorial connections - Combinatorial and sequential functions - Truth tables"/>
+    <meta name="keywords" content="Algebra Boole, digital combinatorial functions, binary functions, PTE ELETTRONICA"/>
+    <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW"/>
+    <meta name="REVISIT-AFTER" content="10 DAYS"/>
+    <link rel="stylesheet" type="text/css" href="../css/frame_code.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main_menu-menu.css" media="screen"/>
+    <script type="text/javascript" src="http://www.pte.it/wimpy/wimpy_button_bridge.js">
+    </script>
+    <script language="javascript">
+         wimpyButtonImagePlay = "b_play_small.png";
+         wimpyButtonImagePause = "b_pause_small.png";
+    </script>
+   
+  </head>
+  <body leftmargin="0" topmargin="0">
+    <div id="header">
+      <table border="0" width="95%" height="45">
+        <tbody>
+          <tr>
+            <td width="80%">
+              <img title="logo_pte_170px" border="0" alt="logo PTE" src="images/logo_pte_170px.png" width="170" height="44"/> </td>
+            <td width="20%">
+              <h3 style="TEXT-ALIGN: right">
+                <a href="mailto:pte@pte.it">E-mail: pte@pte.it</a> </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="main_menu-menu">
+        <li class="first">
+          <a href="http://www.pte.it/index.htm">Home Page</a> </li>
+        <li>
+          <a>Esempi apparati didattici</a> <ul>
+            <li>
+              <a href="http://www.pte.it/didattica/abaco/abaco.htm">Abaco</a> </li>
+            <li>
+              <a href="http://www.pte.it/didattica/telemetro/telemetro.htm">Telemisura trigonometrica</a> </li>
+          </ul></li>
+        <li class="first">
+          <a href="http://www.pte.it/didattica/boole/boole1.htm">Esempi contenuti didattici</a> </li>
+        <li class="first">
+          <a href="http://www.pte.it/links/links.htm">Link siti interessanti</a> </li>
+      </ul>
+    </div>
+    <div id="leftnavigation">
+      <table border="0" cellspacing="1" cellpadding="2" width="98%">
+        <tbody>
+          <tr>
+            <td class="titolo">BOOLEAN ALGEBRA</td>
+          </tr>
+          <tr>
+            <td class="attivo">Foreword <br/><h3>
+                <img onclick="wimpyButtonPlayPause('http://www.pte.it/inglese/training/boole/frame1.mp3')" 
+				src="b_play_small.png"/> Audio</h3></td>
+          </tr>
+          <tr>
+            <td class="sottotitolo">Logic links</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_2.htm">Negation (NOT)</a> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_3.htm">Product (AND)</a> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_4.htm">Inverted Product (NAND)</a> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_5.htm">Sum (OR)</a> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_6.htm">Invertd Sum (NOR)</a> </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_7.htm">Exclusive sum (XOR)</a> </td>
+          </tr>
+          <tr>
+            <td class="sottotitolo">Logical Functions </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_8.htm">Sequential and combinatorial functions </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="boole_in_9.htm">Tables </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <hr/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="content">
+      <h1>BOOLEAN ALGEBRA</h1>
+      <img alt="boole1.jpg (8973 byte)" src="images/boole1.jpg" width="215" height="236"/> <p>Boolean (George Boole 1815-1864) algebra considers functions of variables which can assume only two values:<font></font> </p><p></p><center>
+        <b>
+          <font color="#0000ff" face="Arial">True</font> </b>
+        <font face="Arial">or <font color="#ff0000">
+            <b>False</b> </font></font>
+      </center><p></p><p>
+        <font face="Arial">Such values are generally associated with the following symbols:</font> </p><p></p><center>
+        <b>
+          <font color="#0000ff">
+            <font face="Arial">1</font> </font>
+        </b>
+        <font face="Arial">(indicating True value) <br/><b>
+            <font color="#ff0000">0</font>
+          </b> (indicating False value)</font> </center><p></p><p>
+        In electrical circuits:<br/>a variable may indicate the presence (<i>positive logic</i>) 
+		or the absence (<i>negative logic</i>)of a predetermined tension value.<br/>
+		Usually Boolean variables are identified with letters as: <i>A</i>.<br/>
+		The interaction between variables, determined by logic links (e.g. <i>B</i> is true if <i>A</i> is false ), is expressed by functions of the following type: </p>
+		<p></p>
+        <img align="bottom" src="images/img101.gif" width="45" height="22" naturalsizeflag="3"/> <p></p><p>
+        <br/>
+        <font face="Arial">Where <img align="bottom" src="images/img102.gif" width="17" height="22" naturalsizeflag="3"/>
+		 is the negation of A ( i.e. <img align="bottom" src="images/img102.gif" width="17" height="22" naturalsizeflag="3"/> is True if <i>A</i> is false).<br/></font>
+      </p><hr align="left"/><i>
+        <font size="-1" face="Arial">Note:<br/>The first application of Boolean algebra was in the railroad field where Boolean variables indicated the position of rail switches.</font> </i><font size="-1" face="Arial"></font><hr align="left"/></div>
+    <div id="footer">
+      <table border="0" width="95%" height="16" cols="2">
+        <tbody>
+          <tr>
+            <td>
+              <span style="COLOR: white">Tutti i diritti riservati - Riproduzione vietata </span>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

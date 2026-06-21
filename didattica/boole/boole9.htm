@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Definizione di funzioni combinatorie loro rappresentazione mediante tavole di verita' nell'algebra di Boole" />
+  <meta name="keywords" content="Algebra di Boole,porte logiche, connettivi logici, funzioni sequenziali,tavole di verita', didattica, elettronica digitale, PTE ELETTRONICA" />
+  <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" />
+  <meta name="REVISIT-AFTER" content="10 DAYS" />
+
+  <title>PTE ELETTRONICA Didattica: Algebra di Boole Tavole di verita'</title>
+  
+  <link href="../css/frame_code_1.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/main_menu-menu.css" media="screen" />
+
+  
+ 
+</head><body topmargin="0" leftmargin="0">
+<div id="header">
+<table border="0" height="45" width="95%">
+  <tbody>
+    <tr>
+      <td width="80%"> <img src="images/logo_pte_170px.png" alt="logo PTE" title="logo_pte_170px" border="0" height="44" width="170" /> </td>
+      <td width="20%">
+      <h3 style="text-align: right;"> <a href="mailto:%20pte@pte.it">E-mail: pte@pte.it</a> </h3>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ul class="main_menu-menu">
+  <li class="first"><a href="http://www.pte.it/index.htm">Home Page</a></li>
+  <li><a>Esempi apparati didattici</a>
+    <ul>
+      <li><a href="http://www.pte.it/didattica/abaco/abaco.htm">Abaco</a></li>
+      <li><a href="http://www.pte.it/didattica/telemetro/telemetro.htm">Telemisura trigonometrica</a></li>
+    </ul>
+  </li>
+  <li class="first"><a href="http://www.pte.it/didattica/boole/boole1.htm">Esempi contenuti didattici</a> </li>
+  <li class="first"><a href="http://www.pte.it/links/links.htm">Link siti interessanti</a></li>
+</ul>
+</div>
+
+<div id="leftnavigation">
+<table border="0" cellpadding="2" cellspacing="1" width="98%">
+  <tbody>
+    <tr>
+      <td class="titolo">ALGEBRA di BOOLE</td>
+    </tr>
+    <tr>
+      <td><a href="boole1.htm">Premessa </a></td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Connettivi logici</td>
+    </tr>
+    <tr>
+      <td><a href="boole2.htm">Negazione (NOT)</a></td>
+    </tr>
+    <tr>
+      <td> <a href="boole3.htm">Prodotto (AND) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole4.htm">Prododotto invertito (NAND)&gt;</a></td>
+    </tr>
+    <tr>
+      <td><a href="boole5.htm">Somma (OR) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole6.htm">Somma Invertita (NOR) </a></td>
+    </tr>
+    <tr>
+      <td><a href="boole7.htm">Somma esclusiva (EXOR)</a></td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Funzioni logiche </td>
+    </tr>
+    <tr>
+      <td><a href="boole8.htm">Funzioni sequenziali e combinatorie </a></td>
+    </tr>
+    <tr>
+      <td class="sottotitolo">Rappresentazione funzioni combinatorie</td>
+    </tr>
+    <tr>
+      <td class="attivo">Tavole di verita'
+      <br><br>
+      <audio controls="controls">
+  		Il vostro browser non supporta il tag &lt;audio&gt;. 
+  		<!-- <source src="boole9.mp3" type="audio/mpeg"/>  -->
+   		<source src="boole9.ogg" type="audio/ogg"/>
+	 </audio> 
+      
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <hr /> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id="content">
+<h1>TAVOLE DI VERITA'</h1>
+<div align="center">
+<center>
+</center></div>
+<table border="0" cellpadding="3" cellspacing="3">
+</table>
+<table border="0" cellpadding="3" cellspacing="3">
+  <tbody>
+    <tr>
+      <td colspan="2">Il comportamento di un sistema combinatorio,
+oltre ad essere descritto algebricamente dalla relativa funzione, può
+essere descritto in forma tabellare da una tavola (o tabella) di
+verità. <br />
+Posto uguale ad <i>N</i> il numero delle variabili indipendenti
+(ingressi di una rete combinatoria), la tavola avra' 2<i><sup>N</sup></i>
+righe (ad es. per esprimere <img src="images/img00036.gif" align="bottom" height="14" width="14" /> <i>(variabile dipendente)</i>
+in funzione delle variabili indipendenti <img src="images/img00037.gif" align="bottom" height="14" width="14" /> e <img src="images/img00038.gif" align="bottom" height="14" width="14" />
+occorreranno 4 righe (2<i><sup>N</sup></i>=4) corrispondenti alle 4
+combinazioni delle 2 variabili <img src="images/img00037.gif" align="bottom" height="14" width="14" /> e <img src="images/img00038.gif" align="bottom" height="14" width="14" />).</td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="images/tavola1.gif" alt="tavola1.gif (2165 byte)" align="left" height="130" hspace="10" vspace="10" width="200" />
+      <p>Le colonne della tavola sono pari alla somma del numero delle
+variabili indipendenti e delle variabili dipendenti ( quindi, nel caso
+della variabile dipendente <img src="images/img00039.gif" align="bottom" height="14" width="14" /> funzione delle variabili
+indipendenti <img src="images/img00037.gif" align="bottom" height="14" width="14" /> e <img src="images/img00038.gif" align="bottom" height="14" width="14" />, si avranno complessivamente 3 colonne).</p>
+      <p>Le colonne relative alle variabili indipendenti vengono
+separate da una linea verticale dalla ( o dalle) colonne relative alle
+variabili dipendenti.</p>
+      <p>In testa alla tabella viene aggiunta una riga orizzontale
+riservata all' indicazione del nome delle variabili associate ad ogni
+colonna della tavola.<br />
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">La tabella viene riempita scrivendo prima tutti i
+possibili valori binari delle variabili indipendenti (in genere , ad
+evitare confusione, conviene scrivere i valori nell ' ordine binario
+naturale, ad es. nel caso di due variabili indipendenti conviene
+scrivere i valori nell' ordine:</td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="images/tavola1.gif" alt="tavola1.gif (2165 byte)" height="130" width="200" /></td>
+      <td width="50%">
+      <p align="center"><img src="images/img00042.gif" align="bottom" height="18" width="153" /></p>
+      <p align="center"><img src="images/img00043.gif" align="bottom" height="18" width="148" /></p>
+      <p align="center"><img src="images/img00044.gif" align="bottom" height="18" width="150" /></p>
+      <p align="center"><img src="images/img00045.gif" align="bottom" height="18" width="146" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">successivamente nella colonna ( o nelle colonne)
+relativa alla variabile ( o alle variabili) dipendente (dipendenti) si
+scrivono i valori binari assunti da tale variabile (uscita) in
+corrispondenza dei rispettivi ingressi.
+      <hr /> </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <h2>TABELLA RIASSUNTIVA: SIMBOLI GRAFICI PORTE LOGICHE E RELATIVE
+TAVOLE DI VERITA'</h2>
+      <table align="center" bgcolor="#ffffff" border="2" cellpadding="4" cellspacing="2">
+        <tbody>
+          <tr>
+            <td align="center" height="89">&nbsp;
+            <p>NOT<i>(un ingresso, una uscita)</i></p>
+            </td>
+            <td align="center" height="89"><img src="images/not1.gif" align="bottom" height="89" width="150" /></td>
+            <td align="center" height="89"><img src="images/img901.gif" align="bottom" height="18" width="45" /></td>
+            <td align="center" height="89"><img src="images/img902.gif" align="bottom" height="70" width="44" /></td>
+          </tr>
+          <tr>
+            <td align="center" height="121">&nbsp;
+            <p><b>AND</b> <i>(due ingressi, una uscita)</i></p>
+            </td>
+            <td align="center" height="121"><img src="images/and1.gif" align="bottom" height="88" width="150" /></td>
+            <td align="center" height="121"><img src="images/img903.gif" align="bottom" height="14" width="69" /></td>
+            <td align="center" height="121"><img src="images/img904.gif" align="bottom" height="119" width="69" /></td>
+          </tr>
+          <tr>
+            <td align="center">&nbsp;
+            <p><b>NAND</b><i>(due ingressi, una uscita)</i></p>
+            </td>
+            <td align="center"><img src="images/nand1.gif" align="bottom" height="76" width="150" /></td>
+            <td align="center"><img src="images/img905.gif" align="bottom" height="19" width="69" /></td>
+            <td align="center"><img src="images/img906.gif" align="bottom" height="119" width="69" /></td>
+          </tr>
+          <tr>
+            <td align="center">&nbsp;
+            <p><b>OR</b> <i>(due ingressi, una uscita)</i></p>
+            </td>
+            <td align="center"><img src="images/or1.gif" align="bottom" height="105" width="150" /></td>
+            <td align="center"><img src="images/img907.gif" align="bottom" height="14" width="70" /></td>
+            <td align="center"><img src="images/img908.gif" align="bottom" height="119" width="69" /></td>
+          </tr>
+          <tr>
+            <td align="center">&nbsp;
+            <p><b>NOR</b> (due ingressi, una uscita)</p>
+            </td>
+            <td align="center"><img src="images/nor1.gif" naturalsizeflag="3" align="bottom" height="84" width="150" /></td>
+            <td align="center"><img src="images/img909.gif" align="bottom" height="19" width="70" /></td>
+            <td align="center"><img src="images/img910.gif" align="bottom" height="119" width="69" /></td>
+          </tr>
+          <tr>
+            <td align="center">&nbsp;
+            <p><b>EXOR</b> (due ingressi, una uscita)</p>
+            </td>
+            <td align="center"><img src="images/exor1.gif" align="bottom" height="80" width="150" /></td>
+            <td align="center"><img src="images/img911.gif" align="bottom" height="14" width="70" /></td>
+            <td align="center"><img src="images/img912.gif" align="bottom" height="119" width="69" />s</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr /> <br />
+</div>
+
+<div id="footer">
+<table border="0" cols="2" height="16" width="95%">
+  <tbody>
+    <tr>
+      <td width="80%"> <span style="color: white;"> Tutti i diritti
+riservati - Riproduzione vietata </span> </td>
+      <td width="20%"> <span style="color: white;">
+      <h3 style="text-align: right;"> Per info: pte@pte.it </h3>
+      </span> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</body></html>

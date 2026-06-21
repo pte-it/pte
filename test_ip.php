@@ -1,0 +1,1 @@
+<?phpecho "<B> <P>";  //echo "Il Vs. indirizzo IP: ".$_SERVER['REMOTE_ADDR'];   $ip = getenv('REMOTE_ADDR');   echo "Il Vs. indirizzo IP: ".$ip;echo "</B> </P>";?>

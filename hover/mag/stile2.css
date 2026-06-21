@@ -1,0 +1,17 @@
+<style TYPE="text/css">
+<!--
+A{ font-family: Arial, Verdana; font-size: 10pt; font-weight: bold }
+.normale {background: #FFFF00}
+.attivo {background: #D9D900}
+P{ font-family: Arial, Verdana; font-size: 10pt; font-weight: bold; text-align: justify }
+P.CENTRO { font-family: Arial, Verdana; font-size: 10pt; font-weight: bold; text-align: center }
+td{ font-family: Arial, Verdana; font-size: 10pt; font-weight: bold; text-align: justify }
+H1{background: #FFFF00; color: #000000;  font-size: 12pt; font-weight: bold; font-family: Arial, Verdana; text-align: left }
+H1.CENTRO { font-family: Arial, Verdana; font-size: 12pt; font-weight: bold; text-align: center }
+ul{ font-family: Arial, Verdana; font-size: 10pt; font-weight: bold }
+#testata {
+position:absolute;
+top: 0px;
+}
+-->
+</style>

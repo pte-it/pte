@@ -1,0 +1,50 @@
+#container {
+  position: relative;
+}
+
+
+	
+
+#menu {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+#menu, #menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#menu li {
+  float: left;
+  background: #008000;
+}
+
+#menu a {
+  display: block;
+  padding: 5px;
+  width: 140px;
+  font : 10pt Arial,geneva,helvetica;
+  font-weight: bold;
+  text-align: center;
+  color:#fff;
+}
+
+#menu li ul {
+  position: absolute;
+  left: -999em;
+  width: 135px;
+}
+
+
+#menu li:hover ul, #menu li ul:hover {
+  left:auto;
+  }
+
+
+#link:hover  {  
+  background:#3366ff;  
+  }
+

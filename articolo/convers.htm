@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+ 
+  <META NAME="description" CONTENT="Da PTE ELETTRONICA:Conversione tra valute in parità fissa
+rispetto all'EURO">
+  <META NAME="keywords" CONTENT="PTE ELETTRONICA, EURO, cambiavalute, convertitore euro, euroconvertitore">
+  <SCRIPT language="JavaScript">
+<!--
+<!--Il presente script può essere riprodotto a adattato su-->
+<!--autorizzazione della PTE ELETTRONICA a condizione che non-->
+<!--siano rimosse queste righe per informazioni pte@pte.it-->
+function conversione()
+{
+var Origine_fattori = new Array( );
+	Origine_fattori[0]="0.00051646";
+	Origine_fattori[1]="1";
+	Origine_fattori[2]="0.51129";
+	Origine_fattori[3]="0.1524449";
+	Origine_fattori[4]="0.0247894";
+	Origine_fattori[5]="0.168188";
+	Origine_fattori[6]="0.45378";
+	Origine_fattori[7]="0.0060101";
+	Origine_fattori[8]="0.0049880"
+	Origine_fattori[9]="1.26974";
+	Origine_fattori[10]="0.072673";
+	Origine_fattori[11]="0.002934702";
+
+var Origine_valuta = new Array( );
+ 		Origine_valuta [0]="LIRA ITALIANA ";
+    	Origine_valuta [1]="EURO";
+      	Origine_valuta [2]="MARCO TEDESCO";        
+		Origine_valuta [3]="FRANCO FRANCESE";  
+ 		Origine_valuta [4]="FRANCO BELGA";     
+  		Origine_valuta [5]="MARCO FINLANDESE";        
+		Origine_valuta [6]="FIORINO OLANDESE"; 
+		Origine_valuta [7]="PESETA SPAGNOLA ";   
+ 		Origine_valuta [8]="ESCUDO PORTOGHESE";
+		Origine_valuta [9]="LIRA IRLANDESE";        
+		Origine_valuta [10]="SCELLINO AUSTRIACO";
+		Origine_valuta [11]="DRACMA GRECA";
+
+
+var DESTINAZIONE_fattori = new Array( );
+	DESTINAZIONE_fattori[0]="1";
+	DESTINAZIONE_fattori[1]="1936.27";
+	DESTINAZIONE_fattori[2]="1.95583";
+	DESTINAZIONE_fattori[3]="6.55957";
+	DESTINAZIONE_fattori[4]="40.3399";
+	DESTINAZIONE_fattori[5]="5.94573";
+	DESTINAZIONE_fattori[6]="2.20371";
+	DESTINAZIONE_fattori[7]="166.386";
+	DESTINAZIONE_fattori[8]="200.482"
+	DESTINAZIONE_fattori[9]="0.78756";
+	DESTINAZIONE_fattori[10]="13.7603";
+	DESTINAZIONE_fattori[11]="340.750";
+
+var DESTINAZIONE_valuta = new Array( );
+ 		DESTINAZIONE_valuta [0]="EURO";
+    	DESTINAZIONE_valuta [1]="LIRE ITALIANE";
+      	DESTINAZIONE_valuta [2]="MARCHI TEDESCHI";        
+		DESTINAZIONE_valuta [3]="FRANCHI FRANCESI";  
+ 		DESTINAZIONE_valuta [4]="FRANCHI BELGI";     
+  		DESTINAZIONE_valuta [5]="MARCHI FINLANDESE";        
+		DESTINAZIONE_valuta [6]="FIORINI OLANDESE"; 
+		DESTINAZIONE_valuta [7]="PESETAS SPAGNOLA ";   
+ 		DESTINAZIONE_valuta [8]="ESCUDOS PORTOGHESI";
+		DESTINAZIONE_valuta [9]="LIRE IRLANDESI";        
+		DESTINAZIONE_valuta [10]="SCELLINI AUSTRIACI";
+		DESTINAZIONE_valuta [11]="DRACME GRAECHE";
+
+
+
+var valuta_origine =eval(document.forms[0].valuta_origine.value);
+var stringa =document.forms[0].valuta_origine.value;
+var indice =document.forms[0].ORIGINE.selectedIndex;
+var valuta= parseFloat(Origine_fattori [indice])*valuta_origine;
+<!--valuta espresso in EURO-->
+indice =document.forms[0].DESTINAZIONE.selectedIndex;
+var valuta_convertita= valuta*parseFloat(DESTINAZIONE_fattori [indice]);
+<!--arrotondamenti a 2 decimali-->
+alert("risultato senza arrotondamenti: "+valuta_convertita);
+valuta_convertita=Math.floor(valuta_convertita)+(Math.round((valuta_convertita -Math.floor(valuta_convertita))*100))*0.01;
+var messaggio ="Risultato della conversione "+valuta_convertita +" "+ DESTINAZIONE_valuta [indice]
+document.forms[0].RISULTATO.value=messaggio;
+
+}
+// --></SCRIPT>
+  <TITLE>CONVERSIONE TRA VALUTE IN PARITA' FISSA</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<FORM>
+<P><CENTER><TABLE BORDER="0" WIDTH="98%" CELLSPACING="2" CELLPADDING="0" bgcolor="#99CCFF">
+  <TR>
+    <TD>
+    <img border="0" src="euro_an.gif" alt="LOGO EURO" hspace="1" vspace="1" loop="infinite" width="86" height="83">
+    <p>&nbsp;
+</TD>
+    <TD>
+    <P><B><I><FONT SIZE="+1" FACE="Arial">CONVERSIONE VALUTARIA DA:</FONT></I></B></P>
+
+    <UL>
+      <LI><FONT FACE="Arial, helvetica" size="3">VALUTA IN PARITA' FISSA AD EURO</FONT>
+      <LI><FONT FACE="Arial, helvetica" size="3">EURO A VALUTA IN PARITA' FISSA</FONT>
+      <LI><font face="Arial, helvetica" size="3">TRA VALUTE IN PARITA' FISSA</font>
+    </UL>
+</TD>
+    <TD VALIGN="middle">
+    <P><font size="2" face="Arial, helvetica"><b>Per saperne di pi&ugrave;:</b></font></P>
+
+    <P><a HREF="http://www.consumatori.it/euroweb/index.htm" TARGET="_top"><font size="2" face="Arial, helvetica"><b>Sito Unione
+    Nazionale Consumatori</b></font></a></TD>
+  </TR>
+</TABLE><HR></CENTER>
+
+<P><CENTER><B><FONT FACE="Arial">PROCEDURA PASSO - PASSO</FONT></B></CENTER></P>
+
+<CENTER><TABLE WIDTH="98%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="516">
+    &nbsp;1.&nbsp;<B><FONT SIZE="-1" FACE="Arial">INSERIRE AMMONTARE
+    IN VALUTA NAZIONALE OD EURO</FONT></B></TD> 
+    <TD WIDTH="214">
+    <INPUT NAME="valuta_origine" TYPE="text" SIZE="20">
+</TD>
+  </TR>
+  <TR>
+    <TD WIDTH="516">
+    &nbsp;2.&nbsp;<B><FONT SIZE="-1" FACE="Arial">SELEZIONARE PAESE
+    ORIGINE VALUTA DA CONVERTIRE</FONT></B></TD> 
+    <TD WIDTH="214">
+    <SELECT NAME="ORIGINE">
+    <OPTION VALUE="1 " SELECTED>LIRA ITALIANA
+    <OPTION VALUE="2">EURO
+    <OPTION VALUE="3">MARCO TEDESCO
+    <OPTION VALUE="4">FRANCO FRANCESE
+    <OPTION VALUE="5">FRANCO BELGA
+    <OPTION VALUE="6">MARCO FINLANDESE
+    <OPTION VALUE="7">FIORINO OLANDESE
+    <OPTION VALUE="8">PESETA SPAGNOLA
+    <OPTION VALUE=" 9">ESCUDO PORTOGHESE
+    <OPTION VALUE="10">LIRA IRLANDESE
+    <OPTION VALUE="11">SCELLINO AUSTRIACO
+    <OPTION VALUE="12">DRACMA GRECA
+
+    </SELECT></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="516">
+    &nbsp;3.&nbsp;<B><FONT SIZE="-1" FACE="Arial">SELEZIONARE IN
+    QUALE VALUTA CONVERTIRE</FONT></B></TD> 
+    <TD WIDTH="214">
+    <SELECT NAME="DESTINAZIONE">
+    <OPTION VALUE="1" SELECTED>EURO
+    <OPTION VALUE="2">LIRA ITALIANA
+    <OPTION VALUE="3">MARCO TEDESCO
+    <OPTION VALUE="4">FRANCO FRANCESE
+    <OPTION VALUE="5">FRANCO BELGA
+    <OPTION VALUE="6">MARCO FINLANDESE
+    <OPTION VALUE="7">FIORINO OLANDESE
+    <OPTION VALUE="8">PESETA SPAGNOLA
+    <OPTION VALUE="9">ESCUDO PORTOGHESE
+    <OPTION VALUE="10">LIRA IRLANDESE
+    <OPTION VALUE="11">SCELLINO AUSTRIACO
+    <OPTION VALUE="12">DRACMA GRECA
+
+    </SELECT></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="516">
+    &nbsp;4.&nbsp;<B><FONT SIZE="-1" FACE="Arial">PREMERE IL TASTO
+    INVIO PER OTTENERE IL RISULTATO</FONT></B></TD> 
+    <TD WIDTH="214">
+    <input type="button" value="INVIO" name="B1"
+      onclick="conversione()">
+</TD>
+  </TR>
+  <TR>
+    <TD WIDTH="730" COLSPAN="2">
+    <P><CENTER><INPUT TYPE="text" NAME="RISULTATO" SIZE="60" style="text-align: center; font-family: Arial; font-size: 12 pt; font-weight: bold; color: #FF6600"></CENTER></TD>
+  </TR>
+</TABLE></CENTER>
+
+<CENTER><TABLE WIDTH="738" BORDER="0" CELLSPACING="2" CELLPADDING="0" bgcolor="#FFFFFF">
+  <TR>
+    <TD bgcolor="#FFFFFF" width="573">
+    <font color="#993300">
+    <FONT SIZE="-1" FACE="Arial">Dal <B>1&deg; gennaio 1999 </B>l'euro
+    <IMG SRC="euro.gif" WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+    NATURALSIZEFLAG="3">&egrave; la moneta ufficiale di 11 Stati facenti parte&nbsp;
+    dell'Unione Monetaria
+    Europea (EMU): Austria, Belgio, Finlandia, Francia,
+    Germania, Irlanda, Italia, Lussemburgo, Olanda, Portogallo e
+    Spagna.<br>
+    </FONT>Dal <FONT SIZE="-1" FACE="Arial"> <B>1&deg; gennaio 2001 </B>a questi
+    11 stati si è aggiunta la Grecia.<BR>
+    Le banconote e le monete metalliche entreranno in circolazione in Italia il <B>1&deg; gennaio 2002.<br>
+    </B>Il <B> 28 febbraio 2002 </B>in Italia la lira cesserà di avere valore
+    legale.<br>
+    Le vecchie lire saranno ammesse al cambio presso la Banca d'Italia
+    per 10 anni.</FONT></font></TD> 
+    <TD bgcolor="#FFFFFF" align="center" width="155">
+    <P ALIGN=center><a href="../index.htm"><img border="0" src="homef.gif" width="90" height="90"></a><P ALIGN=center><font face="Arial, helvetica" size="2"><b><a href="../index.htm">HOME
+    PAGE<br>
+    PTE ELETTRONICA</a></b></font></TD> 
+  </TR>
+</TABLE></CENTER>
+
+<P><FONT SIZE="-2">NOTA: Pur avendo messo la massima cura nella
+redazione di questa pagina non si assumono responsabilit&agrave;
+in ordine alla correttezza dei risultati.</FONT></FORM>
+
+</BODY>
+</HTML>

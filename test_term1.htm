@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Test sistema</title>
+</head>
+
+<body>
+<p> test_terminale utente</p>
+
+
+<?php
+
+
+/* individua terminali mobili*/
+$ismobile = 0;
+$container = $_SERVER['HTTP_USER_AGENT'];
+
+// A list of mobile devices
+$useragents = array (
+
+'Android' ,
+'AppleWebKit' ,
+'Blazer' ,
+'Palm' ,
+'Handspring' ,
+'Nokia' ,
+'Kyocera',
+'Samsung' ,
+'Motorola' ,
+'Smartphone',
+'Windows CE' ,
+'Blackberry' ,
+'WAP' ,
+'SonyEricsson',
+'PlayStation Portable',
+'LG',
+'MMP',
+'OPWV',
+'Symbian',
+'EPOC',
+'iPad',
+'Mobile',
+);
+
+foreach ( $useragents as $useragents ) {
+if(strstr($container,$useragents)) {
+$ismobile = 1;
+}
+}
+
+//$risposta = "<p>" . $_SERVER['HTTP_USER_AGENT'] . "</p>";
+$risposta = "php eseguito";
+print $risposta;
+
+/* if ( $ismobile == 1 ) {
+echo "mobile device";
+echo $_SERVER['HTTP_USER_AGENT'];*/
+
+
+//header("Location: http://www.pte.it/mobile/index.htm"); 
+/*}
+else {
+echo "desktop device";
+echo $_SERVER['HTTP_USER_AGENT'];	
+
+
+header("Location: http://www.pte.it/index1.htm"); 	
+}
+*/
+?> 
+
+
+</body>
+
+</html>

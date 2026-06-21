@@ -1,0 +1,223 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>PTE ELETTRONICA LETTURA AUTOMATICA TESTI</title>
+<meta NAME="description"
+CONTENT="PTE ELETTRONICA: Pagina dimostrativa della sintesi vocale  il visitatore
+può digitare o introdurre un testo a sua scelta (formato txt) mediante copia e incolla che verrà letto dal calcolatore">
+<meta NAME="keywords"
+CONTENT="TTS, Text to speech conversion, ipovedenti, non vedenti, ciechi, handicap, accessibilità, automazione, PTE ELETTRONICA">
+<link rel="stylesheet" type="text/css" href="stile2.css">
+
+
+
+<object ID="SpeechPluginObj" CLASSID="CLSID:E4DFABBD-F5F6-11D3-8421-0080C6F79C42" Width="0" Height="0"> 
+<embed TYPE="application/x-SpeechPlugin" name="SpeechPluginObj" HIDDEN></embed> </object> 
+
+<script LANGUAGE="javascript">
+
+function aggiorna(indice)
+{
+//alert (indice);
+SpeechPlugin.SetVoice(indice);
+document.Controller.SpeedVal.value=SpeechPlugin.GetSpeed();
+
+}
+
+function IsSpeechPluginInstalled()
+{
+  if (navigator.appName == 'Netscape')
+  {
+    if (navigator.plugins["SpeechPlugin"]) return (1);
+    else return (0);
+  }
+  else if (navigator.appName == "Microsoft Internet Explorer")
+  {
+    return CheckIEControl();
+  }
+}
+
+
+function onHome()
+{
+if (CanTalk)
+{
+SpeechPlugin.Speak ("Link HOME PAGE");
+}
+}
+
+function ferma()
+{
+if (CanTalk)
+{
+SpeechPlugin.Stop();
+}
+}
+
+function ttsSetSpeed(Speed) 
+{
+//alert (Speed);
+
+if (CanTalk)
+{
+//alert ("funzione");
+ 
+ if (SpeechPlugin.SetSpeed(Speed)!=0)
+    {
+         //if (document.Controller.StatusVal.value=="Idle") alert("Speed out of range.");
+        alert("Velocità non ammessa");
+
+        document.Controller.SpeedVal.value=SpeechPlugin.GetSpeed();
+    }
+ }
+}
+
+</script>
+
+<script LANGUAGE=VBSCRIPT>
+
+Function CheckIEControl()
+  Dim SpeechControl
+  On Error Resume Next
+  Set SpeechControl = CreateObject("IESP.SpeechControl.1")
+  CheckIEControl=IsObject(SpeechControl)
+End Function
+
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="2" cellspacing="1" width="98%">
+    <tr>
+      <td width="240" rowspan="2" valign="top"><p><a onmouseover=onHome(); onmouseout=ferma()  href="../index.htm"><img border="0" src="../images/logo_an1.gif" width="235" height="76" alt="LINK ALLA HOME PAGE PTE ELETTRONICA">
+        </a>
+        <hr>
+        <p>
+        <script LANGUAGE="javascript">
+var CanTalk=IsSpeechPluginInstalled();
+if (CanTalk)
+{
+ var SpeechPlugin = document.SpeechPluginObj;
+ document.write("<a href='http://www.speaksforitself.com/' target='_blank'><img SRC='splogo.gif' border=0 ALT='Questo sito parla!'></a>");
+}
+else
+{
+ document.write("<a href='http://www.speaksforitself.com/speaksforitself/download.asp?UID=181665862268' target='_blank'><img SRC='dlsp.gif' border=0 ALT='Clickare per scaricare lo SpeechPlugin'></a>");
+}
+
+</script>
+      <td valign="top">
+        
+        <script LANGUAGE="javascript">
+    if (CanTalk){
+    
+    
+    
+            document.write ('<p class="centro"> SELEZIONARE UNA DELLE VOCI DISPONIBILI <BR>');
+            document.write ("<form>");
+            //document.write ("<select name='voce' onChange='SpeechPlugin.SetVoice(this.form.voce.selectedIndex+1)'>");
+            document.write ("<select name='voce' onChange='aggiorna(this.form.voce.selectedIndex)'>");
+
+                
+                document.write ("<OPTION VALUE="+0+">"+"--Scegliere la voce di un parlatore--");
+
+            
+            for (x=0; x< SpeechPlugin.GetNumOfVoices(); x++)
+            {
+                document.write ("<OPTION VALUE="+(x+1)+">"+SpeechPlugin.GetVoiceDescription(x+1));
+            }
+            document.write ("</select>");
+            document.write ("</form>");
+            
+            
+            //alert ("valore="+ this.form.voce.selectedIndex);
+        }
+        else
+        {
+        document.write ('<p class="centro"> INSTALLARE NEL SISTEMA IL SOFTWARE RELATIVO AD UN PARLATORE <BR> CLICCANDO SUL LOGO "SPEAK FOR ITSELF"');
+
+        }   
+            
+        </script>
+        
+        
+        <p>
+     &nbsp;
+        
+        
+        <h1>
+     INSERIRE TRAMITE TASTIERA <i>(oppure tramite COPIA e INCOLLA da file in formato txt)<br>
+     </i>UN TESTO NEL RIQUADRO SOTTOSTANTE E PREMERE&quot; LEGGI&quot; </h1>
+        <form>
+        <center>
+          <div align="center">
+            <table border="0" cellpadding="2" cellspacing="1" width="90%">
+              <tr>
+                <td><input type="button" value="LEGGI" name="B1" Onclick="if (CanTalk) SpeechPlugin.Speak(this.form.testo.value);" style="font-family: Arial; font-size: 10 pt; font-weight: bold">
+                  <p><input type="button" value="SOSPENDI LETTURA" name="B2" Onclick="if (CanTalk) SpeechPlugin.Pause();" style="font-family: Arial; font-size: 10 pt; font-weight: bold">
+                  </p>
+                  <p><input type="button" value="RIPRENDI LETTURA" name="B3" Onclick="if (CanTalk) SpeechPlugin.Resume();" style="font-family: Arial; font-size: 10 pt; font-weight: bold">
+                  </p>
+                  <p><b><input type="button" value="ANNULLA LETTURA" name="B4" Onclick="if (CanTalk) SpeechPlugin.Stop();" style="font-family: Arial; font-size: 10 pt; font-weight: bold"></b></p></td>
+                <td><textarea rows="8" name="testo" cols="40">Type in text to speak or paste as txt file</textarea></td>
+              </tr>
+            </table>
+          </div>
+        </form>
+        
+        
+        <h1>Note sulla conversione in voce di un documento (text to speech conversion);
+        </h1>
+        </center>
+     </td>   
+    </tr>
+    <tr>
+      <td>La conversione automatica in voce di un documento testuale migliora
+        l'accessibilità dei siti nei confronti degli utenti dotati di ridotte
+        capacità visive e trova applicazione in molti settori industriali, in
+        cui occorre generare automaticamente dei messaggi variabili.<br>
+    La
+        conversione viene preceduta da una analisi del testo che ha, tra i vari
+        fini, la ricostruzione della pronuncia dei numeri e di alcune abbreviazioni
+     in una specifica  lingua  e l'inserimento delle pause, corrispondenti ai segni di interpunzione.<br>
+        Per ogni lingua, occorre disporre di un file che memorizza i fonemi e le regole
+        proprie della particolare lingua.<br>
+        <hr>
+        <p>
+ Da programma possono essere variati alcuni
+        parametri relativi alla voce riprodotta, ad esempio può essere variata
+        la velocità di lettura entro certi valori</p>
+        <FORM NAME='Controller'>
+        <div align="center">
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+        <p class="CENTRO">Velocità parlatore
+        <INPUT  size=5 name=SpeedVal value="0">&nbsp;</td>
+              <td><input type="button" value="INVIO" name="B1" OnClick ="ttsSetSpeed(parseInt(this.form.SpeedVal.value))"></td>
+            </tr>
+          </table>
+        </div>
+        <p>
+        
+        <!--
+            <INPUT onchange=ttsSetSpeed(parseInt(this.form.SpeedVal.value)) size=5 name=SpeedVal><p>
+            <input type="button" value="INVIO" name="B1" OnClick ="alert(this.form.SpeedVal.value);">
+         //-->
+         </FORM>
+          <p class="CENTRO"><a onmouseover=onHome(); onmouseout=ferma() href="../index.htm">PTE HOME PAGE</a></p>
+       
+    </tr>
+  </table>
+  </center>
+</div>
+
+</body>
+
+</html>
