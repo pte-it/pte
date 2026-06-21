@@ -40,10 +40,10 @@ $ismobile = 1;
 if ( $ismobile == 1 ) {
 //echo "<p>mobile device</p>";
 //echo $_SERVER['HTTP_USER_AGENT'];
-header("Location: http://www.pte.it/mobile/index.html"); 
+header("Location: https://pte-it.github.io/pte/mobile/index.html"); 
 }
 else {
-header("Location: http://www.pte.it"); 	
+header("Location: https://pte-it.github.io/pte"); 	
 }
 ?> 
 

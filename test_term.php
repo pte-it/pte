@@ -43,16 +43,16 @@ $ismobile = 1;
 if ( $ismobile == 1 ) {
 echo "document.write ('<p>mobile device</p>')";
 //echo "document.write ($_SERVER['HTTP_USER_AGENT'])";
-//header("Location: http://www.pte.it/mobile/index.htm"); 
+//header("Location: https://pte-it.github.io/pte/mobile/index.htm"); 
 }
 else {
 echo "document.write ('desktop device<br>')";
-// $targetURL="http://www.pte.it/index1.htm";
-//header("Location: http://www.pte.it/index1.htm"); 
+// $targetURL="https://pte-it.github.io/pte/index1.htm";
+//header("Location: https://pte-it.github.io/pte/index1.htm"); 
 //echo "document.write ('window.location')";
 //echo "document.write ($_SERVER['HTTP_USER_AGENT'])";	
 	
-//header("Location: http://www.pte.it/index1.htm"); 	
+//header("Location: https://pte-it.github.io/pte/index1.htm"); 	
 }
 ?> 
 

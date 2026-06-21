@@ -43,13 +43,13 @@ $ismobile = 1;
 if ( $ismobile == 1 ) {
 echo "document.write ('<p>mobile device</p>')";
 //echo "document.write ($_SERVER['HTTP_USER_AGENT'])";
-//header("Location: http://www.pte.it/mobile/index.htm"); 
+//header("Location: https://pte-it.github.io/pte/mobile/index.htm"); 
 }
 else {
 //echo "document.write ('desktop device<br>')";
 
 
- header("Location: http://www.pte.it/mobile/index.htm"); 
+ header("Location: https://pte-it.github.io/pte/mobile/index.htm"); 
 
 }
 ?> 
